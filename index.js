@@ -44,6 +44,9 @@ myProj.parse(function (err) {
 
     const tests = getRecursiveTests(myProj, target_uuid, []);
     log('Tests Found in Target:',tests.length);
+    tests.forEach((test) => {
+        log('Test: ', test);
+    });
     let classNameTests = []
 
     if(TEST_PATH != '') {

@@ -78,6 +78,9 @@ myProj.parse(function (err) {
     })
 
     log("Tests found in test path: ", classNameTests.length);
+    classNameTests.forEach((testName) => {
+        log('Test name: ', testName);
+    });
 
     const classNameShards = shard(classNameTests, SHARDS);
     log('Shards: ', classNameShards.length)
